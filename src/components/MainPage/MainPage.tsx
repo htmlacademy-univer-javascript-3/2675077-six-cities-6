@@ -4,7 +4,6 @@ import PlaceCard from '../PlaceCard/PlaceCard';
 const MainPage: React.FC = () => {
   const places = [
     {
-      id: 1,
       isPremium: true,
       imageSrc: 'img/apartment-01.jpg',
       price: 120,
@@ -14,7 +13,6 @@ const MainPage: React.FC = () => {
       isBookmarked: false,
     },
     {
-      id: 2,
       isPremium: false,
       imageSrc: 'img/room.jpg',
       price: 80,
@@ -24,7 +22,6 @@ const MainPage: React.FC = () => {
       isBookmarked: true,
     },
     {
-      id: 3,
       isPremium: false,
       imageSrc: 'img/apartment-02.jpg',
       price: 132,
@@ -34,7 +31,6 @@ const MainPage: React.FC = () => {
       isBookmarked: false,
     },
     {
-      id: 4,
       isPremium: true,
       imageSrc: 'img/apartment-03.jpg',
       price: 180,
@@ -44,7 +40,6 @@ const MainPage: React.FC = () => {
       isBookmarked: false,
     },
     {
-      id: 5,
       isPremium: false,
       imageSrc: 'img/room.jpg',
       price: 80,
@@ -160,9 +155,9 @@ const MainPage: React.FC = () => {
               </form>
 
               <div className="cities__places-list places__list tabs__content">
-                {places.map((place) => (
+                {places.map((place, index) => (
                   <PlaceCard
-                    key={place.id}
+                    key={index}
                     isPremium={place.isPremium}
                     imageSrc={place.imageSrc}
                     price={place.price}
