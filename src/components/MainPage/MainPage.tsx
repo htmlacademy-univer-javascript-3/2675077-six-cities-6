@@ -1,7 +1,11 @@
 import React from 'react';
 import PlaceCard from '../PlaceCard/PlaceCard';
 
-const MainPage: React.FC = () => {
+interface MainPageProps {
+  offersCount: number;
+}
+
+const MainPage: React.FC<MainPageProps> = ({ offersCount }) => {
   const places = [
     {
       isPremium: true,
@@ -49,6 +53,8 @@ const MainPage: React.FC = () => {
       isBookmarked: true,
     },
   ];
+
+  const city = 'Amsterdam';
 
   return (
     <div className="page page--gray page--main">
@@ -129,7 +135,7 @@ const MainPage: React.FC = () => {
           <div className="cities__places-container container">
             <section className="cities__places places">
               <h2 className="visually-hidden">Places</h2>
-              <b className="places__found">312 places to stay in Amsterdam</b>
+              <b className="places__found">{offersCount} places to stay in {city}</b>
               <form className="places__sorting" action="#" method="get">
                 <span className="places__sorting-caption">Sort by</span>
                 <span className="places__sorting-type" tabIndex={0}>
