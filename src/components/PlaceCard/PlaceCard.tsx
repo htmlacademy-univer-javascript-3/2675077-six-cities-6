@@ -1,13 +1,13 @@
 import React from 'react';
 
 interface PlaceCardProps {
-  isPremium?: boolean; 
-  imageSrc: string;    
-  price: number;       
-  rating: number;      
-  title: string;       
-  type: string;        
-  isBookmarked: boolean; 
+  isPremium?: boolean;
+  imageSrc: string;
+  price: number;
+  rating: number;
+  title: string;
+  type: string;
+  isBookmarked: boolean;
 }
 
 const PlaceCard: React.FC<PlaceCardProps> = ({

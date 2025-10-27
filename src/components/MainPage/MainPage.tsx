@@ -8,6 +8,7 @@ interface MainPageProps {
 const MainPage: React.FC<MainPageProps> = ({ offersCount }) => {
   const places = [
     {
+      id: 1,
       isPremium: true,
       imageSrc: 'img/apartment-01.jpg',
       price: 120,
@@ -17,6 +18,7 @@ const MainPage: React.FC<MainPageProps> = ({ offersCount }) => {
       isBookmarked: false,
     },
     {
+      id: 2,
       isPremium: false,
       imageSrc: 'img/room.jpg',
       price: 80,
@@ -26,6 +28,7 @@ const MainPage: React.FC<MainPageProps> = ({ offersCount }) => {
       isBookmarked: true,
     },
     {
+      id: 3,
       isPremium: false,
       imageSrc: 'img/apartment-02.jpg',
       price: 132,
@@ -35,6 +38,7 @@ const MainPage: React.FC<MainPageProps> = ({ offersCount }) => {
       isBookmarked: false,
     },
     {
+      id: 4,
       isPremium: true,
       imageSrc: 'img/apartment-03.jpg',
       price: 180,
@@ -44,6 +48,7 @@ const MainPage: React.FC<MainPageProps> = ({ offersCount }) => {
       isBookmarked: false,
     },
     {
+      id: 5,
       isPremium: false,
       imageSrc: 'img/room.jpg',
       price: 80,
@@ -161,9 +166,9 @@ const MainPage: React.FC<MainPageProps> = ({ offersCount }) => {
               </form>
 
               <div className="cities__places-list places__list tabs__content">
-                {places.map((place, index) => (
+                {places.map((place) => (
                   <PlaceCard
-                    key={index}
+                    key={place.id}
                     isPremium={place.isPremium}
                     imageSrc={place.imageSrc}
                     price={place.price}
